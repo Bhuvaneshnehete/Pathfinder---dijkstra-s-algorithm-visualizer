@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pathfinder — Dijkstra's Algorithm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stage">
+  <header>
+    <div class="eyebrow">Weighted Terrain &middot; Guaranteed Shortest Path</div>
+    <h1>Pathfinder</h1>
+    <div class="subtitle">Watch Dijkstra's algorithm find the cheapest route, cell by cell.</div>
+  </header>
+
+  <div class="frame">
+    <div id="board" class="board"></div>
+
+    <div class="legend">
+      <span><i class="swatch start"></i> Start</span>
+      <span><i class="swatch end"></i> End</span>
+      <span><i class="swatch wall"></i> Wall</span>
+      <span><i class="swatch weight"></i> Heavy terrain (cost 5)</span>
+      <span><i class="swatch visited"></i> Visited</span>
+      <span><i class="swatch path"></i> Shortest path</span>
+    </div>
+
+    <div class="controls">
+      <div class="group toggle">
+        <button id="wallModeBtn" class="mode active">Draw Walls</button>
+        <button id="weightModeBtn" class="mode">Draw Terrain</button>
+      </div>
+      <div class="group">
+        Speed
+        <input type="range" id="speedSlider" min="1" max="10" value="6">
+      </div>
+      <button id="visualizeBtn" class="primary">Visualize Dijkstra</button>
+      <button id="clearPathBtn">Clear Path</button>
+      <button id="clearBoardBtn">Clear Board</button>
+    </div>
+
+    <div class="status" id="status">Drag from the green node to the red node to reposition them. Click and drag on empty cells to draw.</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
